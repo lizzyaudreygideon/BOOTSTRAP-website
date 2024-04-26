@@ -14,7 +14,7 @@
   src: url("/Montserrat-Bold.ttf");
 }
 h2 {
-  font-family: "myfont";
+  font-family: "myfont", Montserrat;
   font-size: 24px;
   font-weight: 400;
 }
@@ -80,7 +80,7 @@ h2 {
   height: 30vh;
 }
 .banner h1 {
-  font-family: "myfont";
+  font-family: "myfont", Montserrat;
   font-size: 40px;
   font-weight: 400;
   text-align: center;
@@ -939,7 +939,7 @@ h2 {
 }
 @media only screen and (min-width: 993px) and (max-width: 1024px) {
   h2 {
-    font-family: "myfont";
+    font-family: "myfont", Montserrat;
     font-size: 24px;
     font-weight: 400;
   }
@@ -1005,7 +1005,7 @@ h2 {
     height: 30vh;
   }
   .banner h1 {
-    font-family: "myfont";
+    font-family: "myfont", Montserrat;
     font-size: 40px;
     font-weight: 400;
     text-align: center;
