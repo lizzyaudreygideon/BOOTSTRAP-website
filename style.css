@@ -9,6 +9,16 @@
   font-family: "mycustomfont";
   src: url("/Montserrat-Regular.ttf");
 }
+@font-face {
+  font-family: "myfont";
+  src: url("/Montserrat-Bold.ttf");
+}
+h2 {
+  font-family: "myfont";
+  font-size: 24px;
+  font-weight: 400;
+}
+
 .navigation {
   display: flex;
   width: 100%;
@@ -19,8 +29,10 @@
   color: white;
 }
 .navigation .start {
-  font-family: "mycustomfont", Montserrat;
+  font-family: "myfont", Montserrat;
   margin: 20px 20px 20px 60px;
+  font-size: 15px;
+  font-weight: 700;
 }
 .navigation nav ul {
   float: right;
@@ -68,6 +80,9 @@
   height: 30vh;
 }
 .banner h1 {
+  font-family: "myfont";
+  font-size: 40px;
+  font-weight: 400;
   text-align: center;
   margin: 40px 0 0 0;
 }
@@ -92,12 +107,12 @@
   margin: 2px;
 }
 
-.container {
+.port {
   text-align: center;
   padding: 80px;
   font-family: "mycustomfont", Montserrat;
 }
-.container img {
+.port img {
   width: 100%;
   height: 40vh;
   margin: 10px;
@@ -105,30 +120,30 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.container .hearding {
+.port .hearding {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-.container .iconline {
+.port .iconline {
   display: flex;
   align-items: center;
 }
-.container .iconline .line {
+.port .iconline .line {
   width: 70px;
   border: 1px solid;
   height: 1px;
 }
-.container .iconline i {
+.port .iconline i {
   margin: 10px;
 }
-.container .iconline span {
+.port .iconline span {
   display: inline-block;
   margin: 2px;
 }
 
-.about {
+#about {
   padding: 80px;
   background-color: rgb(27, 188, 155);
   color: white;
@@ -138,10 +153,10 @@
   justify-content: space-evenly;
   font-family: "mycustomfont", Montserrat;
 }
-.about h2 {
+#about h2 {
   text-align: center;
 }
-.about .button1 {
+#about .button1 {
   background-color: rgb(27, 188, 155);
   border: solid white;
   color: white;
@@ -157,73 +172,75 @@
   margin-top: 5px;
   text-decoration: none;
 }
-.about .row {
+#about .row {
   display: flex;
   align-items: start;
   justify-content: center;
   margin-left: 20px;
   margin-right: 20px;
 }
-.about .iconline {
+#about .iconline {
   display: flex;
   align-items: center;
 }
-.about .line {
+#about .line {
   width: 70px;
   border: 1px solid white;
   height: 1px;
 }
-.about i {
+#about i {
   margin: 10px;
 }
-.about span {
+#about span {
   display: inline-block;
   margin: 2px;
 }
 
-.contact {
+#contact {
   font-family: "mycustomfont", Montserrat;
-  position: relative;
+  padding: 40px 0;
 }
-.contact .form-control {
+#contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+#contact .form-control {
   padding: 10px;
   border: none;
+  font-size: 16px;
 }
-.contact .submit {
+#contact .submit {
   background-color: rgb(27, 188, 155);
   text-decoration: none;
   width: 80px;
   height: 40px;
-  position: absolute;
-  left: 13%;
-  top: 85%;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 5%;
   font-size: 12px;
-  margin-left: 8px;
 }
-.contact .hearding {
+#contact .hearding {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
 }
-.contact .iconline {
+#contact .iconline {
   display: flex;
   align-items: center;
 }
-.contact .line {
+#contact .line {
   width: 70px;
-  border: 1px solid white;
+  border: 1px solid;
   height: 1px;
 }
-.contact i {
+#contact i {
   margin: 10px;
 }
-.contact span {
+#contact span {
   display: inline-block;
   margin: 2px;
 }
@@ -305,9 +322,10 @@
     color: white;
   }
   .navigation .start {
-    font-family: "mycustomfont", Montserrat;
+    font-family: "myfont", Montserrat;
     margin: 20px;
-    font-size: 12px;
+    font-size: 15px;
+    font-weight: 500;
   }
   .navigation nav ul {
     float: right;
@@ -378,27 +396,32 @@
     display: inline-block;
     margin: 2px;
   }
-  .container {
+  .port {
     text-align: center;
-    padding: 60px;
+    padding: 40px 20px 35px 20px;
     font-family: "mycustomfont", Montserrat;
   }
-  .container .row img {
-    width: 85%;
-    height: 24vh;
-    margin: 10px;
-    border-radius: 4px;
+  .port .row {
+    padding: 0;
   }
-  .container .hearding {
+  .port .row img {
+    width: 100%;
+    height: 40vh;
+    margin: 0 0 15px 0;
+    border-radius: 4px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .port .hearding {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
-  .container .hearding h2 {
+  .port .hearding h2 {
     font-size: 22px;
   }
-  .container img {
+  .port img {
     width: 36%;
     height: 12vh;
     margin: 10px;
@@ -406,24 +429,25 @@
     -o-object-fit: contain;
        object-fit: contain;
   }
-  .container .iconline {
+  .port .iconline {
     display: flex;
     align-items: center;
+    margin: 0 0 12px 0;
   }
-  .container .iconline .line {
+  .port .iconline .line {
     width: 50px;
     border: 1px solid;
     height: 1px;
   }
-  .container .iconline i {
+  .port .iconline i {
     margin: 10px;
   }
-  .container .iconline span {
+  .port .iconline span {
     display: inline-block;
     margin: 2px;
   }
-  .about {
-    padding: 60px;
+  #about {
+    padding: 40px 20px 40px 20px;
     background-color: rgb(27, 188, 155);
     color: white;
     display: flex;
@@ -432,10 +456,10 @@
     justify-content: space-evenly;
     font-family: "mycustomfont", Montserrat;
   }
-  .about h2 {
+  #about h2 {
     text-align: center;
   }
-  .about .button1 {
+  #about .button1 {
     background-color: rgb(27, 188, 155);
     border: solid white;
     color: white;
@@ -448,38 +472,41 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 5px;
+    margin: 5px 0;
     text-decoration: none;
   }
-  .about .row {
+  #about .row {
     display: flex;
     align-items: start;
     justify-content: center;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
-  .about .iconline {
+  #about .row .col-md-4 {
+    padding: 0;
+  }
+  #about .iconline {
     display: flex;
     align-items: center;
   }
-  .about .line {
+  #about .line {
     width: 50px;
     border: 1px solid white;
     height: 1px;
   }
-  .about i {
+  #about i {
     margin: 10px;
   }
-  .about span {
+  #about span {
     display: inline-block;
     margin: 2px;
   }
-  .about p {
+  #about p {
     font-size: 12px;
+    padding: 0;
   }
   .contact {
     font-family: "mycustomfont", Montserrat;
-    position: relative;
   }
   .contact .form-control {
     padding: 5px;
@@ -491,9 +518,6 @@
     text-decoration: none;
     width: 60px;
     height: 30px;
-    position: absolute;
-    left: 15%;
-    top: 90%;
     color: white;
     display: flex;
     justify-content: center;
@@ -531,7 +555,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 60px;
+    padding: 40px;
   }
   .footer .loc {
     display: flex;
@@ -542,6 +566,7 @@
   }
   .footer .loc p {
     font-size: 12px;
+    margin-bottom: 20px;
   }
   .footer h3 {
     font-size: 15px;
@@ -571,7 +596,7 @@
   }
   .footer .web .icons {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   .footer .about2 {
     display: flex;
@@ -610,9 +635,9 @@
     color: white;
   }
   .navigation .start {
-    font-family: "mycustomfont", Montserrat;
-    margin: 20px;
-    font-size: 16px;
+    font-family: "myfont", Montserrat;
+    margin: 30px;
+    font-size: 20px;
   }
   .navigation nav ul {
     float: right;
@@ -636,7 +661,7 @@
     float: right;
     background-color: rgb(45, 62, 80);
     padding: 10px;
-    margin: 20px 40px;
+    margin: 20px 20px;
     cursor: pointer;
     display: none;
   }
@@ -653,11 +678,12 @@
     align-items: center;
   }
   .banner .bannerimage {
-    margin: 0;
+    margin: 10px;
     width: 30%;
     height: 30vh;
   }
   .banner h1 {
+    font-family: "myfont", Montserrat;
     text-align: center;
     margin: 0;
     font-size: 30px;
@@ -683,52 +709,56 @@
     display: inline-block;
     margin: 2px;
   }
-  .container {
+  .port {
     text-align: center;
-    padding: 60px;
+    padding: 40px 30px 40px 30px;
     font-family: "mycustomfont", Montserrat;
   }
-  .container .row img {
-    width: 100%;
-    height: 14vh;
+  .port .row .col-md-4 {
+    padding: 0;
+  }
+  .port .row img {
+    width: 90%;
+    height: 20vh;
     margin: 10px;
     border-radius: 4px;
-    -o-object-fit: contain;
-       object-fit: contain;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
-  .container .hearding {
+  .port .hearding {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
-  .container .hearding h2 {
+  .port .hearding h2 {
+    font-family: "myfont", Montserrat;
     font-size: 25px;
   }
-  .container img {
+  .port img {
     width: 39%;
     height: 12vh;
     margin: 10px;
     border-radius: 4px;
   }
-  .container .iconline {
+  .port .iconline {
     display: flex;
     align-items: center;
   }
-  .container .iconline .line {
+  .port .iconline .line {
     width: 60px;
     border: 1px solid;
     height: 1px;
   }
-  .container .iconline i {
+  .port .iconline i {
     margin: 10px;
   }
-  .container .iconline span {
+  .port .iconline span {
     display: inline-block;
     margin: 2px;
   }
-  .about {
-    padding: 60px;
+  #about {
+    padding: 40px 20px 40px 20px;
     background-color: rgb(27, 188, 155);
     color: white;
     display: flex;
@@ -737,11 +767,12 @@
     justify-content: space-evenly;
     font-family: "mycustomfont", Montserrat;
   }
-  .about h2 {
+  #about h2 {
     text-align: center;
     font-size: 25px;
+    font-family: "myfont", Montserrat;
   }
-  .about .button1 {
+  #about .button1 {
     background-color: rgb(27, 188, 155);
     border: solid white;
     color: white;
@@ -757,46 +788,47 @@
     margin-top: 5px;
     text-decoration: none;
   }
-  .about .row p {
+  #about .row {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  #about .row p {
     font-size: 16px;
     line-height: 1.3;
   }
-  .about .iconline {
+  #about .iconline {
     display: flex;
     align-items: center;
   }
-  .about .line {
+  #about .line {
     width: 50px;
     border: 1px solid white;
     height: 1px;
   }
-  .about i {
+  #about i {
     margin: 10px;
   }
-  .about span {
+  #about span {
     display: inline-block;
     margin: 2px;
   }
-  .about p {
-    font-size: 12px;
-  }
-  .contact {
+  #contact {
     font-family: "mycustomfont", Montserrat;
-    position: relative;
+    padding: 40px 0 20px 0;
   }
-  .contact .form-control {
+  #contact .form-control {
     padding: 5px;
     border: none;
     font-size: 16px;
   }
-  .contact .submit {
+  #contact .submit {
     background-color: rgb(27, 188, 155);
     text-decoration: none;
     width: 80px;
     height: 40px;
-    position: absolute;
-    left: 15%;
-    top: 90%;
     color: white;
     display: flex;
     justify-content: center;
@@ -804,25 +836,26 @@
     border-radius: 5%;
     font-size: 14px;
   }
-  .contact .hearding {
+  #contact .hearding {
+    font-family: "myfont", Montserrat;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
   }
-  .contact .iconline {
+  #contact .iconline {
     display: flex;
     align-items: center;
   }
-  .contact .line {
+  #contact .line {
     width: 60px;
-    border: 1px solid white;
+    border: 1px solid;
     height: 1px;
   }
-  .contact i {
+  #contact i {
     margin: 10px;
   }
-  .contact span {
+  #contact span {
     display: inline-block;
     margin: 2px;
   }
@@ -842,7 +875,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-right: 50px;
+    margin-bottom: 16px;
   }
   .footer .loc p {
     font-size: 16px;
@@ -857,7 +890,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 50px;
+    margin-bottom: 16px;
   }
   .footer .web p {
     font-size: 16px;
@@ -882,11 +915,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 10px;
     text-align: center;
   }
   .footer .about2 p {
     font-size: 16px;
+    margin: 0;
   }
   .footer .about2 .green {
     color: green;
@@ -902,6 +935,300 @@
   .footer2 p {
     font-size: 16px;
     padding: 20px;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  h2 {
+    font-family: "myfont";
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .navigation {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    background-color: rgb(45, 62, 80);
+    color: white;
+  }
+  .navigation .start {
+    font-family: "myfont", Montserrat;
+    margin: 20px 20px 20px 60px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .navigation nav ul {
+    float: right;
+    margin: 20px;
+  }
+  .navigation nav li {
+    display: inline-block;
+  }
+  .navigation nav a {
+    font-family: "mycustomfont", Montserrat;
+    color: white;
+    text-decoration: none;
+    margin-right: 40px;
+    font-size: 20pxpx;
+  }
+  .navigation nav label {
+    display: block;
+  }
+  .navigation nav label i {
+    color: white;
+    font-size: 30px;
+    float: right;
+    background-color: rgb(45, 62, 80);
+    padding: 10px;
+    margin: 20px 40px;
+    cursor: pointer;
+    display: none;
+  }
+  .navigation nav #check {
+    display: none;
+  }
+  .banner {
+    font-family: "mycustomfont", Montserrat;
+    background-color: rgb(27, 188, 155);
+    color: white;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner .bannerimage {
+    margin: 0;
+    width: 30%;
+    height: 30vh;
+  }
+  .banner h1 {
+    font-family: "myfont";
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    margin: 40px 0 0 0;
+  }
+  .banner .text {
+    text-align: center;
+    margin: 10px 0 20px 0;
+  }
+  .banner .iconline {
+    display: flex;
+    align-items: center;
+  }
+  .banner .line {
+    width: 70px;
+    border: 1px solid white;
+    height: 1px;
+  }
+  .banner i {
+    margin: 10px;
+  }
+  .banner span {
+    display: inline-block;
+    margin: 2px;
+  }
+  .port {
+    text-align: center;
+    padding: 40px;
+    font-family: "mycustomfont", Montserrat;
+  }
+  .port img {
+    width: 100%;
+    height: 20vh;
+    margin: 10px;
+    border-radius: 4px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .port .hearding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .port .iconline {
+    display: flex;
+    align-items: center;
+  }
+  .port .iconline .line {
+    width: 70px;
+    border: 1px solid;
+    height: 1px;
+  }
+  .port .iconline i {
+    margin: 10px;
+  }
+  .port .iconline span {
+    display: inline-block;
+    margin: 2px;
+  }
+  #about {
+    padding: 40px;
+    background-color: rgb(27, 188, 155);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: "mycustomfont", Montserrat;
+  }
+  #about h2 {
+    text-align: center;
+  }
+  #about .button1 {
+    background-color: rgb(27, 188, 155);
+    border: solid white;
+    color: white;
+    width: 170px;
+    height: 40px;
+    font-size: 13px;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    text-decoration: none;
+  }
+  #about .row {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #about .iconline {
+    display: flex;
+    align-items: center;
+  }
+  #about .line {
+    width: 70px;
+    border: 1px solid white;
+    height: 1px;
+  }
+  #about i {
+    margin: 10px;
+  }
+  #about span {
+    display: inline-block;
+    margin: 2px;
+  }
+  #contact {
+    font-family: "mycustomfont", Montserrat;
+    padding: 60px 0 40px;
+  }
+  #contact form {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  #contact .form-control {
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+  }
+  #contact .submit {
+    background-color: rgb(27, 188, 155);
+    text-decoration: none;
+    width: 80px;
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    font-size: 12px;
+  }
+  #contact .hearding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  #contact .iconline {
+    display: flex;
+    align-items: center;
+  }
+  #contact .line {
+    width: 70px;
+    border: 1px solid;
+    height: 1px;
+  }
+  #contact i {
+    margin: 10px;
+  }
+  #contact span {
+    display: inline-block;
+    margin: 2px;
+  }
+  .footer {
+    font-family: "mycustomfont", Montserrat;
+    color: white;
+    background-color: rgb(45, 62, 80);
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    padding: 60px 40px;
+  }
+  .footer .loc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+  }
+  .footer h3 {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+  }
+  .footer .web {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .footer .web i {
+    border: solid white;
+    border-width: thin;
+    border-radius: 50%;
+    padding: 20px;
+    margin: 3px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer .web .icons {
+    display: flex;
+  }
+  .footer .about2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer .about2 .green {
+    color: green;
+  }
+  .footer2 {
+    font-family: "mycustomfont", Montserrat;
+    background-color: rgb(27, 37, 47);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  .footer2 p {
+    padding: 20px;
+    margin: 0;
   }
 }
 @media only screen and (min-width: 560px) and (max-width: 993px) {
@@ -951,7 +1278,7 @@
 @media (max-width: 559px) {
   .navigation nav label i {
     font-size: 30px;
-    margin: 30px 40px;
+    margin: 10px;
     color: white;
   }
   .navigation nav label #btn {
