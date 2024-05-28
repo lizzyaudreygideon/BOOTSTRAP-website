@@ -1761,6 +1761,23 @@ span{
 
 } 
 
+@media only screen and (min-width:1440px) {
+  #contact {
+    font-family: "mycustomfont", Montserrat;
+    padding: 40px 100px;
+}
 
+.banner {
+  height: 80vh;
+  font-family: "mycustomfont", Montserrat;
+  background-color: rgb(27, 188, 155);
+  color: white;
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+}
 
 
